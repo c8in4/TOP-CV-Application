@@ -1,0 +1,67 @@
+:root {
+  --clr-bg-dark: oklch(0.92 0 110);
+  --clr-bg: oklch(0.96 0 110);
+  --clr-bg-light: oklch(1 0 110);
+  --clr-text: oklch(0.15 0 110);
+  --clr-text-muted: oklch(0.4 0 110);
+  --clr-highlight: oklch(1 0 110);
+  --clr-border: oklch(0.6 0 110);
+  --clr-border-muted: oklch(0.7 0 110);
+
+  --clr-primary: oklch(0.76 0.1 240);
+  --clr-secondary: oklch(0.76 0.1 300);
+  --clr-tertiary: oklch(0.76 0.1 270);
+
+  --clr-danger: oklch(0.7 0.1 30);
+  --clr-warning: oklch(0.7 0.1 100);
+  --clr-success: oklch(0.7 0.1 160);
+  --clr-info: oklch(0.7 0.1 260);
+
+  --box-shadow: 0.1rem 0.1rem 0.5rem var(--clr-text-muted);
+}
+
+body.dark {
+  /* oklch */
+  --clr-bg-dark: oklch(0.05 0 110);
+  --clr-bg: oklch(0.15 0 110);
+  --clr-bg-light: oklch(0.25 0 110);
+  --clr-text: oklch(0.96 0 110);
+  --clr-text-muted: oklch(0.76 0 110);
+  --clr-highlight: oklch(0.5 0 110);
+  --clr-border: oklch(0.4 0 110);
+  --clr-border-muted: oklch(0.3 0 110);
+
+  --clr-primary: oklch(0.4 0.1 240);
+  --clr-secondary: oklch(0.4 0.1 300);
+  --clr-tertiary: oklch(0.4 0.1 270);
+
+  --clr-danger: oklch(0.5 0.1 30);
+  --clr-warning: oklch(0.5 0.1 100);
+  --clr-success: oklch(0.5 0.1 160);
+  --clr-info: oklch(0.5 0.1 260);
+
+  --box-shadow: 0.5rem 0.5rem 1.5rem var(--clr-border-muted);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+  outline: 1px solid red;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
