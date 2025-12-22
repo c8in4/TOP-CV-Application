@@ -8,18 +8,20 @@ export default function Form() {
     const [editMode, setEditMode] = useState(true)
 
     const [general, setGeneral] = useState(
-        { firstName: '', lastName: '', email: '', phoneNumber: '' }
+        { firstName: 'fake', lastName: 'name', email: 'fake@mail.com', phoneNumber: '0123456789' }
     )
 
     const [schools, setSchools] = useState(
         [
-            { schoolName: '', titleOfStudy: '', yearOfGraduation: '' }
+            { schoolName: 'school', titleOfStudy: 'learning', yearOfGraduation: '2025-12-18' },
+            { schoolName: 'school', titleOfStudy: 'learning', yearOfGraduation: '2025-12-18' }
+
         ]
     )
 
     const [experiences, setExperiences] = useState(
         [
-            { companyName: '', titleOfPosition: '', responsibilities: '', startDate: '', endDate: '' }
+            { companyName: 'Work', titleOfPosition: 'employee', responsibilities: 'working', startDate: '2025-12-18', endDate: '2025-12-19' }
         ]
     )
 
@@ -78,7 +80,7 @@ export default function Form() {
 
         setEditMode(false)
 
-        console.log(general, schools, experiences);
+        // console.log(general, schools, experiences);
     }
 
     function handleEdit() {
@@ -141,14 +143,14 @@ export default function Form() {
                 )
                 :
                 (
-                    <Display />
+                    <Display general={general} schools={schools} experiences={experiences} />
                 )}
 
             <div className="buttons">
                 {editMode
                     ? (
                         <>
-                            <button className="submitButton" onClick={handleSubmit} type="button">Submit</button>
+                            <button className="submitButton" onClick={handleSubmit} type="button">Generate CV</button>
                             <button className="deleteButton" onClick={handleClearAll} type="button">Clear all</button>
                         </>
                     )
